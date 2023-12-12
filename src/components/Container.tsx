@@ -1,7 +1,6 @@
 import { Image, Container as UIContainer } from '@chakra-ui/react';
 import { TChildrenProps } from '../types/props';
-
-import logoPng from './assets/crazy_pizza_logo.png';
+import { CRAZY_PIZZA_LOGO } from '../constants/assets';
 
 function Container({ children }: TChildrenProps) {
   return (
@@ -21,7 +20,7 @@ function Container({ children }: TChildrenProps) {
         top="4"
         boxSize="140px"
         objectFit="cover"
-        src={logoPng}
+        src={CRAZY_PIZZA_LOGO}
         alt="Crazy Pizza Logo"
       />
       {children}
