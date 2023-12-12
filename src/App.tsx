@@ -1,13 +1,31 @@
-import { Grid, GridItem } from '@chakra-ui/react';
+import { Box, Center, Container, Image } from '@chakra-ui/react';
+
+import logoPng from './assets/crazy_pizza_logo.png';
 
 function App() {
   return (
-    <Grid h="100vh" templateRows="repeat(2, 1fr)" templateColumns="repeat(5, 1fr)" gap={4}>
-      <GridItem rowSpan={2} colSpan={1} bg="tomato" />
-      <GridItem colSpan={2} bg="papayawhip" />
-      <GridItem colSpan={2} bg="papayawhip" />
-      <GridItem colSpan={4} bg="tomato" />
-    </Grid>
+    <Center justifyContent="center" minH="100vh">
+      <Container
+        w="full"
+        minH="320px"
+        maxW="1200px"
+        position="absolute"
+        bgColor="gray.200"
+        borderRadius={24}
+        padding={6}
+      >
+        <Image
+          position="absolute"
+          right="4"
+          top="4"
+          boxSize="140px"
+          objectFit="cover"
+          src={logoPng}
+          alt="Crazy Pizza Logo"
+        />
+        <Box w="100%" h="40px" bg="tomato"></Box>
+      </Container>
+    </Center>
   );
 }
 
