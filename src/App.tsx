@@ -1,12 +1,14 @@
-import { Box } from '@chakra-ui/react';
 import Layout from './components/Layout';
 import Container from './components/Container';
+import Pizza from './components/Pizza';
+import Options from './components/Options';
 
 function App() {
   return (
     <Layout>
-      <Container>
-        <Box w="100%" h="40px" bg="tomato"></Box>
+      <Container display="flex" flexDirection={{ base: 'column', lg: 'row' }} gap={2}>
+        <Pizza />
+        <Options />
       </Container>
     </Layout>
   );
